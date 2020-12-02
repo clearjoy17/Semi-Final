@@ -3,7 +3,7 @@
 
 <h1>Courses</h1>
 <table class="table table-boarded table-striped table-sm">
-    <thead>
+    <thead class="thead-dark white-text">
         <tr>
             <th>Name</th>
             <th>Description</th>

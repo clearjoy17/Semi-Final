@@ -37,6 +37,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public static function list(){
+        $users = User::orderByRaw('lname', 'fname')->get();
+        $list = [];
+        foreach($users as $user){
+            $list[$user->id]=$user->lname . ', ' . $user->fname;
+        }
+        return $list;
+    }
+
     public function learners(){
         return $this->hasMany('App\Learner');
     }
